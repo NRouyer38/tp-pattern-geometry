@@ -9,7 +9,6 @@ public class LineString implements Geometry{
 
     public LineString() {
         this.points = new ArrayList<Point>();
-        this.points.add(new Point());
     }
 
     public LineString(List<Point> points) {
@@ -28,5 +27,13 @@ public class LineString implements Geometry{
     public String getType() {
         return "LineString";
     }
+    public boolean isEmpty() {
+        for(Point p : points) {
+            if (p.isEmpty()) {
+            return true;
+            }
+        }
+        return false;
+        }
     
 }

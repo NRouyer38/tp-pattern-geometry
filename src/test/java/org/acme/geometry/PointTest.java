@@ -11,8 +11,8 @@ public class PointTest {
 	public void testDefaultConstructor(){
 
 		Point p = new Point();
-		Assert.assertEquals(0.0, p.getCoordinate().getX(), EPSILON);
-		Assert.assertEquals(0.0, p.getCoordinate().getY(), EPSILON);
+		Assert.assertEquals(Double.NaN, p.getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(Double.NaN, p.getCoordinate().getY(), EPSILON);
 	}
 
 	@Test
