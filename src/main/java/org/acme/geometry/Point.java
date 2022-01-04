@@ -28,11 +28,14 @@ public class Point implements Geometry{
 
     @Override
     public void translate(double dx, double dy) {
-        this.coordinate = new Coordinate(coordinate.getX() + dx, coordinate.getY() + dy);
+        this.coordinate = new Coordinate(
+            coordinate.getX() + dx,
+            coordinate.getY() + dy
+            );
     }
 
     @Override
     public Point clone(){
-        return new Point (this.coordinate);
+        return new Point (coordinate);
     }
 }
