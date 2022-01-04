@@ -53,4 +53,14 @@ public class LineStringTest {
         Assert.assertEquals(0.0, newLine.getPointN(0).getCoordinate().getY(), EPSILON);
         Assert.assertEquals(6.9, newLine.getPointN(1).getCoordinate().getX(), EPSILON);     
 	}
+
+	@Test
+	public void testGetEnvelopeMethod() {
+		LineString line = SampleFactory.createLineStringOAB();
+		Envelope envelope = line.getEnvelope();
+		Assert.assertEquals(7.4, envelope.getXmax(), EPSILON);
+		Assert.assertEquals(0.0, envelope.getXmin(), EPSILON);
+		Assert.assertEquals(7.3, envelope.getYmax(), EPSILON);
+		Assert.assertEquals(0.0, envelope.getYmin(), EPSILON);
+	}
 }

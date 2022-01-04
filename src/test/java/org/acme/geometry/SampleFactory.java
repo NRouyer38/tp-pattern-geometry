@@ -23,5 +23,13 @@ public class SampleFactory {
         points.add(createPointA());
         return new LineString(points);
     }
+
+      public static LineString createLineStringOAB(){
+        List<Point> points = new ArrayList<Point>();
+        points.add(createPointO());
+        points.add(createPointA());
+        points.add(createPointB());
+        return new LineString(points);
+    }
     
 }
