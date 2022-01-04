@@ -24,15 +24,9 @@ public class Coordinate {
     	this.y = y;
     	}
 
-        public boolean isEmpty() {
-            if (Double.isNaN(x)) { 
-            return true;
-            }   
-            if (Double.isNaN(y)) {   
-            return true;
-            }
-            return false;
-            }
+    public boolean isEmpty(){
+            return Double.isNaN(x);
+        }
 
 
 }

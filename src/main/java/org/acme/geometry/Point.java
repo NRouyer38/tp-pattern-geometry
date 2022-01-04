@@ -23,6 +23,6 @@ public class Point implements Geometry{
 
     @Override
     public boolean isEmpty() {
-    return coordinate.isEmpty();
-        }
+        return Double.isNaN(coordinate.getX());
+    }
 }
