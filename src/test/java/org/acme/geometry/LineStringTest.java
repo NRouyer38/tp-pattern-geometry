@@ -19,14 +19,12 @@ public class LineStringTest {
 
 	@Test
 	public void testDefaultConstructor() {
-
 		LineString aLine = new LineString();
 		Assert.assertEquals(0, aLine.getNumPoints());
 	}
 
 	@Test
 	public void testConstructor() {
-
 		List<Point> points = new ArrayList<Point>();
 		points.add(createPointA());
 		LineString aLine = new LineString(points);
@@ -34,15 +32,13 @@ public class LineStringTest {
 	}
 
 	@Test
-	public void getTypeMethod() {
-
+	public void testType() {
 		LineString aLine = new LineString();
 		Assert.assertEquals("LineString", aLine.getType());
 	}
 
 	@Test
-	public void getNumPointsMethod() {
-
+	public void testNumPoints() {
 		List<Point> points = new ArrayList<Point>();
 		points.add(createPointO());
 		points.add(createPointA());
@@ -52,14 +48,19 @@ public class LineStringTest {
 	}
 
 	@Test
-	public void getPointNMethod() {
-
+	public void testPointN() {
 		List<Point> points = new ArrayList<Point>();
 		points.add(createPointO());
 		points.add(createPointA());
 		LineString aLine = new LineString(points);
 		Assert.assertEquals(6.9, aLine.getPointN(1).getCoordinate().getX(), EPSILON);
         Assert.assertEquals(3.8, aLine.getPointN(1).getCoordinate().getY(), EPSILON);
+	}
+
+	@Test
+	public void testEmpty() {
+		LineString l = new LineString();
+		Assert.assertTrue(l.isEmpty());
 	}
 
 }
