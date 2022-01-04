@@ -13,7 +13,7 @@ public class EnvelopeBuilder {
         xVals.add(coordinate.getX());
         yVals.add(coordinate.getY());
     }
-
+   
     public Envelope build() {
         double xMin = Collections.min(xVals);
         double yMin = Collections.min(yVals);
@@ -24,6 +24,11 @@ public class EnvelopeBuilder {
         return new Envelope(bottomLeft,topRight);
     }
 
+    public List<Double> getxVals() {
+        return this.xVals;
+    }
 
-
+    public List<Double> getyVals() {
+        return this.yVals;
+    }
 }
