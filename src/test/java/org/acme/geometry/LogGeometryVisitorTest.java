@@ -1,6 +1,5 @@
 package org.acme.geometry;
 
-import java.beans.BeanProperty;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
